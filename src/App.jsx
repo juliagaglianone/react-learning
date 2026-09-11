@@ -1,70 +1,75 @@
 import React from 'react';
-import './App.css'; // Mantenha ou adicione seus estilos aqui
+import './App.css';
 
 export default function App() {
   const atividades = Array.from({ length: 30 }, (_, i) => `Atividade ${i + 1}`);
 
   return (
     <div className="app-container">
-      {/* 1. Cabeçalho com Identidade */}
+      {/* Cabeçalho e Menu de Navegação */}
       <header className="header-container">
         <div className="profile-info">
           <img 
             src="https://via.placeholder.com/120" 
-            alt="Foto de perfil de [Seu Nome], desenvolvedor do portfólio" 
+            alt="Foto de perfil do desenvolvedor" 
             className="avatar"
           />
           <div>
-            <h1>[Seu Nome Completo]</h1>
+            <h1>Seu Nome Completo</h1>
             <p className="subtitle">Curso: Desenvolvimento Web | Turma 2026</p>
             <p className="description">
-              Portfólio desenvolvido para mapear o progresso em React, 
-              exibindo as 30 atividades práticas e boas práticas de acessibilidade e semântica.
+              Portfólio para mapeamento do progresso em React e boas práticas web.
             </p>
-            {/* Botão direcionando à seção de atividades */}
             <a href="#atividades" className="btn-primary">
               Ver Atividades
             </a>
           </div>
         </div>
 
-        <nav>
+        {/* Menu de Navegação por Âncoras */}
+        <nav className="navbar">
           <ul>
             <li><a href="#inicio">Início</a></li>
             <li><a href="#atividades">Atividades</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
       </header>
 
-      {/* 2. Conteúdo Principal */}
+      {/* Conteúdo Principal */}
       <main>
+        {/* Seção Início */}
         <section id="inicio">
           <h2>Visão Geral do Projeto</h2>
 
-          {/* Card 3 (Mantenha o card da etapa anterior) */}
+          {/* Card 3 (Estrutura Semântica) */}
           <article className="card-evidencia">
             <h3>Card 3: Estrutura Semântica</h3>
-            <p>Elementos semânticos empregados nesta aplicação:</p>
-            <ul>
-              <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>.</li>
-            </ul>
+            <p>Elementos semânticos empregados nesta aplicação.</p>
           </article>
 
-          {/* Card 4: Escolhas de Identidade */}
+          {/* Card 4 (Identidade Visual) */}
           <article className="card-evidencia">
             <h3>Card 4: Decisões de Identidade Visual</h3>
-            <p>Escolhas aplicadas para apresentação do autor e marca pessoal:</p>
+            <p>Escolhas aplicadas para apresentação do autor e marca pessoal.</p>
+          </article>
+
+          {/* Card 5: Resultado do Teste do Menu e Links */}
+          <article className="card-evidencia">
+            <h3>Card 5: Teste de Navegação e Âncoras</h3>
+            <p>Verificação do funcionamento do menu de navegação:</p>
             <ul>
-              <li><strong>Nome e Turma:</strong> Identificação clara no topo do cabeçalho.</li>
-              <li><strong>Avatar:</strong> Imagem de perfil acompanhada de atributo <code>alt</code> descritivo para acessibilidade.</li>
-              <li><strong>Propósito:</strong> Resumo direto explicando o objetivo do portfólio.</li>
-              <li><strong>Navegação Guiada:</strong> Botão de call-to-action levando diretamente para a lista de atividades.</li>
+              <li><strong>Início (<code>#inicio</code>):</strong> Rola suavemente para a visão geral e cards.</li>
+              <li><strong>Atividades (<code>#atividades</code>):</strong> Direciona para a lista com 30 itens.</li>
+              <li><strong>Sobre (<code>#sobre</code>):</strong> Navega para as informações sobre o projeto e tecnologias.</li>
+              <li><strong>Contato (<code>#contato</code>):</strong> Direciona para a área de canais de comunicação.</li>
+              <li><strong>Acessibilidade/Foco:</strong> Foco visual ativo via teclado (tecla <code>Tab</code>) destacado nos links.</li>
             </ul>
           </article>
         </section>
 
-        {/* Seção das 30 Atividades */}
+        {/* Seção Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
           <ul className="lista-atividades">
@@ -73,6 +78,25 @@ export default function App() {
                 {atividade}
               </li>
             ))}
+          </ul>
+        </section>
+
+        {/* Seção Sobre */}
+        <section id="sobre">
+          <h2>Sobre o Projeto</h2>
+          <p>
+            Este projeto foi desenvolvido como avaliação individual na disciplina do Professor Celso Barreto,
+            utilizando React, Vite, CSS moderno e Git/Vercel.
+          </p>
+        </section>
+
+        {/* Seção Contato */}
+        <section id="contato">
+          <h2>Contato</h2>
+          <p>Entre em contato ou acesse minhas redes profissionais:</p>
+          <ul>
+            <li>Email: aluno@exemplo.com</li>
+            <li>GitHub: github.com/seu-usuario</li>
           </ul>
         </section>
       </main>
