@@ -152,6 +152,25 @@ export default function App() {
             </div>
           </article>
         </section>
+        
+        {/* Card 9: Organização de Atividades com CSS Grid */}
+      <article className="card-evidencia">
+        <h3>Card 9: Grade Responsiva com CSS Grid</h3>
+        <p>
+          <strong>Regra Utilizada:</strong> <code>grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))</code>.
+        </p>
+        <ul>
+          <li>
+            <strong><code>auto-fill</code>:</strong> Preenche a linha com o máximo de colunas possível mantendo o tamanho mínimo.
+          </li>
+          <li>
+            <strong><code>minmax(280px, 1fr)</code>:</strong> Garante que nenhum cartão fique menor que <code>280px</code> em telas pequenas e faz com que eles se expandam igualmente (<code>1fr</code>) para ocupar o espaço disponível em telas maiores.
+          </li>
+          <li>
+            <strong>Prevenção de Overflow:</strong> Eliminou a necessidade de larguras fixas em <code>px</code>, evitando rolagem horizontal em dispositivos móveis.
+          </li>
+        </ul>
+      </article>
 
         {/* Seção de Grid de Atividades (30 Itens) */}
         <section id="atividades">

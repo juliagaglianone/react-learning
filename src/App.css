@@ -103,3 +103,18 @@
   margin-bottom: var(--spacing-xs);
   display: block;
 }
+
+.grid-atividades {
+  display: grid;
+  /* Cria uma grade fluida e responsiva sem media queries fixas */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg, 1.5rem);
+  width: 100%;
+}
+
+.app-container,
+main,
+section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
