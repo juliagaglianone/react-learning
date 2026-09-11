@@ -1,11 +1,4 @@
 
-.grid-atividades {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-md);
-}
-
 .atividade-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -69,7 +62,7 @@
   transition: background-color 0.2s ease;
 }
 
-
+/* --- Estados Interativos (Hover e Focus) --- */
 .atividade-card:hover,
 .atividade-card.state-hover {
   transform: translateY(-4px);
@@ -88,6 +81,7 @@
   border-color: var(--color-primary);
 }
 
+/* --- Demonstração do Card 7 --- */
 .demonstracao-estados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -104,17 +98,103 @@
   display: block;
 }
 
+/* ==========================================================================
+   2. Layout Base e Grid Principal
+   ========================================================================== */
 .grid-atividades {
   display: grid;
-  /* Cria uma grade fluida e responsiva sem media queries fixas */
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--spacing-lg, 1.5rem);
   width: 100%;
+  margin-top: var(--spacing-md);
 }
 
-.app-container,
-main,
-section {
+/* Trava global de rolagem lateral */
+body,
+.app-container {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* ==========================================================================
+   3. Responsividade e Breakpoints
+   ========================================================================== */
+
+/* Mobile / Telas Pequenas (~360px) */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+
+  .navbar a {
+    padding: 0.3rem 0.6rem;
+    font-size: var(--font-size-sm);
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+
+  .grid-atividades {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet / Telas Médias (~768px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profile-info {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    justify-content: flex-start;
+  }
+
+  .grid-atividades {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* Desktop / Telas Grandes (~1440px) */
+@media (min-width: 1025px) {
+  .app-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .grid-atividades {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }

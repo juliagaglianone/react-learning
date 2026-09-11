@@ -152,7 +152,7 @@ export default function App() {
             </div>
           </article>
         </section>
-        
+
         {/* Card 9: Organização de Atividades com CSS Grid */}
       <article className="card-evidencia">
         <h3>Card 9: Grade Responsiva com CSS Grid</h3>
@@ -168,6 +168,35 @@ export default function App() {
           </li>
           <li>
             <strong>Prevenção de Overflow:</strong> Eliminou a necessidade de larguras fixas em <code>px</code>, evitando rolagem horizontal em dispositivos móveis.
+          </li>
+        </ul>
+      </article>
+
+      {/* Card 10: Responsividade e Testes de Tela */}
+      <article className="card-evidencia">
+        <h3>Card 10: Responsividade e Pontos de Ajuste</h3>
+        <p>Resultados dos testes de layout e correções efetuadas para múltiplos dispositivos:</p>
+        <ul>
+          <li>
+            <strong>Mobile (360 px):</strong>
+            <br />
+            <em>Problema:</em> Quebra do menu e estouro do avatar no topo.
+            <br />
+            <em>Solução:</em> Mudança da direção do Flexbox para coluna (<code>flex-direction: column</code>), redução da tipografia e do avatar para 80px, e centralização dos elementos.
+          </li>
+          <li>
+            <strong>Tablet (768 px):</strong>
+            <br />
+            <em>Problema:</em> Espaçamento lateral excessivo e desalinhamento entre perfil e links do menu.
+            <br />
+            <em>Solução:</em> Realinhamento da navegação em linha e adequação dos cartões com <code>minmax(240px, 1fr)</code>.
+          </li>
+          <li>
+            <strong>Desktop (1440 px):</strong>
+            <br />
+            <em>Problema:</em> Conteúdo muito esticado e disperso nas extremidades.
+            <br />
+            <em>Solução:</em> Aplicação de <code>max-width: 1280px</code> e margens automáticas para centralizar o contêiner principal.
           </li>
         </ul>
       </article>
