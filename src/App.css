@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Estilização dos Cartões de Atividade (Card Component)
-   ========================================================================== */
 
-/* Grid Responsivo para as 30 Atividades */
 .grid-atividades {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -10,7 +6,6 @@
   margin-top: var(--spacing-md);
 }
 
-/* Estrutura Principal do Cartão */
 .atividade-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -24,7 +19,6 @@
   position: relative;
 }
 
-/* Topo do Cartão (Número e Tag da Tecnologia) */
 .atividade-header {
   display: flex;
   justify-content: space-between;
@@ -47,7 +41,6 @@
   border: 1px solid var(--color-border);
 }
 
-/* Título e Descrição (Com Alto Contraste) */
 .atividade-titulo {
   font-size: var(--font-size-lg);
   color: var(--color-text-heading);
@@ -61,7 +54,6 @@
   line-height: 1.5;
 }
 
-/* Botão de Ação do Cartão */
 .atividade-btn {
   display: inline-block;
   text-align: center;
@@ -77,11 +69,7 @@
   transition: background-color 0.2s ease;
 }
 
-/* --------------------------------------------------------------------------
-   ESTADOS INTERATIVOS (Hover e Focus)
-   -------------------------------------------------------------------------- */
 
-/* Estado HOVER: Elevação suave sem comprometer a leitura */
 .atividade-card:hover,
 .atividade-card.state-hover {
   transform: translateY(-4px);
@@ -93,7 +81,6 @@
   background-color: var(--color-primary-hover);
 }
 
-/* Estado FOCUS (Teclado / Acessibilidade) */
 .atividade-card:focus-visible,
 .atividade-card.state-focus {
   outline: 3px solid var(--color-accent);
@@ -101,7 +88,6 @@
   border-color: var(--color-primary);
 }
 
-/* Estilos Específicos para o Card 7 (Demonstração) */
 .demonstracao-estados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

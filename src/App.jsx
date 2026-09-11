@@ -49,9 +49,32 @@ export default function App() {
         <section id="inicio">
           <h2>Visão Geral e Evidências</h2>
 
-          {/* Cards Anteriores (3, 4, 5 e 6) podem ficar aqui */}
+          {/* Card 3 (Estrutura Semântica) */}
+          <article className="card-evidencia">
+            <h3>Card 3: Estrutura Semântica</h3>
+            <p>Elementos semânticos empregados nesta aplicação.</p>
+          </article>
 
-          {/* Card 7: Demonstrativo dos Estados Visuais dos Cartões */}
+          {/* Card 4 (Identidade Visual) */}
+          <article className="card-evidencia">
+            <h3>Card 4: Decisões de Identidade Visual</h3>
+            <p>Escolhas aplicadas para apresentação do autor e marca pessoal.</p>
+          </article>
+
+          {/* Card 5: Teste do Menu e Links */}
+          <article className="card-evidencia">
+            <h3>Card 5: Teste de Navegação e Âncoras</h3>
+            <p>Verificação do funcionamento do menu de navegação:</p>
+            <ul>
+              <li><strong>Início (<code>#inicio</code>):</strong> Rola suavemente para a visão geral e cards.</li>
+              <li><strong>Atividades (<code>#atividades</code>):</strong> Direciona para a lista com 30 itens.</li>
+              <li><strong>Sobre (<code>#sobre</code>):</strong> Navega para as informações sobre o projeto e tecnologias.</li>
+              <li><strong>Contato (<code>#contato</code>):</strong> Direciona para a área de canais de comunicação.</li>
+              <li><strong>Acessibilidade/Foco:</strong> Foco visual ativo via teclado (tecla <code>Tab</code>) destacado nos links.</li>
+            </ul>
+          </article>
+
+          {/* Card 7: Estados Visuais do Componente de Cartão */}
           <article className="card-evidencia">
             <h3>Card 7: Estados Visuais do Componente de Cartão</h3>
             <p>Demonstração dos componentes de cartão e seus estados de interação:</p>
@@ -94,6 +117,40 @@ export default function App() {
               </div>
             </div>
           </article>
+
+          {/* Card 8: Organização de Layout com Flexbox */}
+          <article className="card-evidencia">
+            <h3>Card 8: Organização com Flexbox</h3>
+            <p>
+              <strong>Problema Resolvido:</strong> O alinhamento vertical imperfeito de textos e imagens 
+              no cabeçalho, além da necessidade de <code>margin</code> individual para separar itens de menu. 
+              Com o Flexbox, usamos <code>align-items: center</code> para centralizar verticalmente e <code>gap</code> 
+              para um espaçamento limpo e constante.
+            </p>
+
+            {/* Demonstração Comparativa de Alinhamento */}
+            <div className="flex-demo-container">
+              {/* Sem Flexbox */}
+              <div className="flex-demo-box demo-sem-flex">
+                <p>Sem Flexbox (display block padrão):</p>
+                <div className="demo-items">
+                  <span className="demo-badge">Item 1</span>
+                  <span className="demo-badge">Item 2</span>
+                  <span className="demo-badge">Item 3</span>
+                </div>
+              </div>
+
+              {/* Com Flexbox */}
+              <div className="flex-demo-box demo-com-flex">
+                <p>Com Flexbox (justify-content: space-between e align-items: center):</p>
+                <div className="demo-items">
+                  <span className="demo-badge">Item 1</span>
+                  <span className="demo-badge">Item 2</span>
+                  <span className="demo-badge">Item 3</span>
+                </div>
+              </div>
+            </div>
+          </article>
         </section>
 
         {/* Seção de Grid de Atividades (30 Itens) */}
@@ -114,6 +171,21 @@ export default function App() {
               </article>
             ))}
           </div>
+        </section>
+
+        {/* Seção Sobre */}
+        <section id="sobre">
+          <h2>Sobre o Projeto</h2>
+          <p>
+            Projeto desenvolvido como avaliação individual com foco em React, 
+            CSS moderno, Flexbox e acessibilidade.
+          </p>
+        </section>
+
+        {/* Seção Contato */}
+        <section id="contato">
+          <h2>Contato</h2>
+          <p>Canais de comunicação e redes do desenvolvedor.</p>
         </section>
       </main>
 
