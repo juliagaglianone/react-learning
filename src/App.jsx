@@ -69,6 +69,26 @@ export default function App() {
           </article>
         </section>
 
+        {/* Card 6: Sistema Visual e Tokens CSS */}
+          <article className="card-evidencia">
+            <h3>Card 6: Sistema Visual e Tokens CSS</h3>
+            <p>Definições de variáveis e estilização global adotadas no projeto:</p>
+            <ul>
+              <li>
+                <strong>Paleta de Cores:</strong> Primary (<code>#2563eb</code>), Secondary (<code>#0f172a</code>), Accent (<code>#f59e0b</code>), Background (<code>#f8fafc</code>).
+              </li>
+              <li>
+                <strong>Tipografia:</strong> Fonte do sistema sem serifa; escalas estruturadas do <code>14px</code> ao <code>32px</code>.
+              </li>
+              <li>
+                <strong>Espaçamentos e Raios:</strong> Escala padronizada de <code>4px</code> a <code>32px</code>; cantos arredondados de <code>4px</code> a <code>12px</code>.
+              </li>
+              <li>
+                <strong>Normalização:</strong> Aplicação universal de <code>box-sizing: border-box</code> e reset de margens no CSS.
+              </li>
+            </ul>
+          </article>
+
         {/* Seção Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
