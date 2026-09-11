@@ -2,11 +2,18 @@ import React from 'react';
 import './App.css';
 
 export default function App() {
-  const atividades = Array.from({ length: 30 }, (_, i) => `Atividade ${i + 1}`);
+  // Dados simulados para as 30 atividades
+  const atividades = Array.from({ length: 30 }, (_, index) => ({
+    id: index + 1,
+    numero: String(index + 1).padStart(2, '0'),
+    titulo: `Atividade Prática ${index + 1}`,
+    descricao: `Desenvolvimento e implementação do módulo ${index + 1} focado em componentes e boas práticas React.`,
+    tecnologia: index % 2 === 0 ? 'React & CSS' : 'JavaScript & JSX',
+  }));
 
   return (
     <div className="app-container">
-      {/* Cabeçalho e Menu de Navegação */}
+      {/* Header */}
       <header className="header-container">
         <div className="profile-info">
           <img 
@@ -26,7 +33,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Menu de Navegação por Âncoras */}
         <nav className="navbar">
           <ul>
             <li><a href="#inicio">Início</a></li>
@@ -39,85 +45,75 @@ export default function App() {
 
       {/* Conteúdo Principal */}
       <main>
-        {/* Seção Início */}
+        {/* Seção Início / Evidências */}
         <section id="inicio">
-          <h2>Visão Geral do Projeto</h2>
+          <h2>Visão Geral e Evidências</h2>
 
-          {/* Card 3 (Estrutura Semântica) */}
-          <article className="card-evidencia">
-            <h3>Card 3: Estrutura Semântica</h3>
-            <p>Elementos semânticos empregados nesta aplicação.</p>
-          </article>
+          {/* Cards Anteriores (3, 4, 5 e 6) podem ficar aqui */}
 
-          {/* Card 4 (Identidade Visual) */}
+          {/* Card 7: Demonstrativo dos Estados Visuais dos Cartões */}
           <article className="card-evidencia">
-            <h3>Card 4: Decisões de Identidade Visual</h3>
-            <p>Escolhas aplicadas para apresentação do autor e marca pessoal.</p>
-          </article>
+            <h3>Card 7: Estados Visuais do Componente de Cartão</h3>
+            <p>Demonstração dos componentes de cartão e seus estados de interação:</p>
 
-          {/* Card 5: Resultado do Teste do Menu e Links */}
-          <article className="card-evidencia">
-            <h3>Card 5: Teste de Navegação e Âncoras</h3>
-            <p>Verificação do funcionamento do menu de navegação:</p>
-            <ul>
-              <li><strong>Início (<code>#inicio</code>):</strong> Rola suavemente para a visão geral e cards.</li>
-              <li><strong>Atividades (<code>#atividades</code>):</strong> Direciona para a lista com 30 itens.</li>
-              <li><strong>Sobre (<code>#sobre</code>):</strong> Navega para as informações sobre o projeto e tecnologias.</li>
-              <li><strong>Contato (<code>#contato</code>):</strong> Direciona para a área de canais de comunicação.</li>
-              <li><strong>Acessibilidade/Foco:</strong> Foco visual ativo via teclado (tecla <code>Tab</code>) destacado nos links.</li>
-            </ul>
+            <div className="demonstracao-estados">
+              {/* Estado Normal */}
+              <div className="atividade-card demo-estado">
+                <span className="estado-label">Estado: Normal</span>
+                <div className="atividade-header">
+                  <span className="atividade-numero">#01</span>
+                  <span className="atividade-tag">React</span>
+                </div>
+                <h4 className="atividade-titulo">Exemplo Normal</h4>
+                <p className="atividade-descricao">Apresentação padrão do cartão com contraste adequado.</p>
+                <button className="atividade-btn" type="button">Acessar Entrega</button>
+              </div>
+
+              {/* Estado Hover Simulado */}
+              <div className="atividade-card demo-estado state-hover">
+                <span className="estado-label">Estado: Hover</span>
+                <div className="atividade-header">
+                  <span className="atividade-numero">#02</span>
+                  <span className="atividade-tag">CSS</span>
+                </div>
+                <h4 className="atividade-titulo">Exemplo Hover</h4>
+                <p className="atividade-descricao">Elevação suave na sombra e alteração de borda ao passar o mouse.</p>
+                <button className="atividade-btn" type="button">Acessar Entrega</button>
+              </div>
+
+              {/* Estado Focus Simulado */}
+              <div className="atividade-card demo-estado state-focus">
+                <span className="estado-label">Estado: Focus (Teclado)</span>
+                <div className="atividade-header">
+                  <span className="atividade-numero">#03</span>
+                  <span className="atividade-tag">JSX</span>
+                </div>
+                <h4 className="atividade-titulo">Exemplo Focus</h4>
+                <p className="atividade-descricao">Contorno visível e destacado para navegação acessível via Tab.</p>
+                <button className="atividade-btn" type="button" tabIndex={0}>Acessar Entrega</button>
+              </div>
+            </div>
           </article>
         </section>
 
-        {/* Card 6: Sistema Visual e Tokens CSS */}
-          <article className="card-evidencia">
-            <h3>Card 6: Sistema Visual e Tokens CSS</h3>
-            <p>Definições de variáveis e estilização global adotadas no projeto:</p>
-            <ul>
-              <li>
-                <strong>Paleta de Cores:</strong> Primary (<code>#2563eb</code>), Secondary (<code>#0f172a</code>), Accent (<code>#f59e0b</code>), Background (<code>#f8fafc</code>).
-              </li>
-              <li>
-                <strong>Tipografia:</strong> Fonte do sistema sem serifa; escalas estruturadas do <code>14px</code> ao <code>32px</code>.
-              </li>
-              <li>
-                <strong>Espaçamentos e Raios:</strong> Escala padronizada de <code>4px</code> a <code>32px</code>; cantos arredondados de <code>4px</code> a <code>12px</code>.
-              </li>
-              <li>
-                <strong>Normalização:</strong> Aplicação universal de <code>box-sizing: border-box</code> e reset de margens no CSS.
-              </li>
-            </ul>
-          </article>
-
-        {/* Seção Atividades */}
+        {/* Seção de Grid de Atividades (30 Itens) */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
-          <ul className="lista-atividades">
-            {atividades.map((atividade, index) => (
-              <li key={index} className="item-atividade">
-                {atividade}
-              </li>
+          <div className="grid-atividades">
+            {atividades.map((item) => (
+              <article key={item.id} className="atividade-card" tabIndex={0}>
+                <div className="atividade-header">
+                  <span className="atividade-numero">#{item.numero}</span>
+                  <span className="atividade-tag">{item.tecnologia}</span>
+                </div>
+                <h3 className="atividade-titulo">{item.titulo}</h3>
+                <p className="atividade-descricao">{item.descricao}</p>
+                <a href={`#atividade-${item.id}`} className="atividade-btn">
+                  Ver Detalhes
+                </a>
+              </article>
             ))}
-          </ul>
-        </section>
-
-        {/* Seção Sobre */}
-        <section id="sobre">
-          <h2>Sobre o Projeto</h2>
-          <p>
-            Este projeto foi desenvolvido como avaliação individual na disciplina do Professor Celso Barreto,
-            utilizando React, Vite, CSS moderno e Git/Vercel.
-          </p>
-        </section>
-
-        {/* Seção Contato */}
-        <section id="contato">
-          <h2>Contato</h2>
-          <p>Entre em contato ou acesse minhas redes profissionais:</p>
-          <ul>
-            <li>Email: aluno@exemplo.com</li>
-            <li>GitHub: github.com/seu-usuario</li>
-          </ul>
+          </div>
         </section>
       </main>
 
