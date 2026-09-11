@@ -1,0 +1,32 @@
+/* Rolagem suave para navegação por âncoras */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilização do Menu de Navegação */
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0066cc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Indicador visual de FOCO para acessibilidade (tecla Tab) */
+.navbar a:focus,
+.btn-primary:focus {
+  outline: 3px solid #ff9900;
+  outline-offset: 2px;
+  background-color: #e6f0ff;
+}
