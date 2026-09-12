@@ -2,32 +2,30 @@ const atividades = [
   {
     id: 1,
     numero: "01",
-    titulo: "Estrutura HTML",
-    descricao: "Criação da estrutura inicial da página.",
-    tecnologia: "HTML",
+    titulo: "Atividade Prática 1",
+    descricao: "Desenvolvimento e implementação do módulo 1.",
+    tecnologia: "React",
     status: "Concluída",
     link: "#atividade-1"
   },
   {
     id: 2,
     numero: "02",
-    titulo: "Estilização com CSS",
-    descricao: "Aplicação de estilos e identidade visual.",
+    titulo: "Atividade Prática 2",
+    descricao: "Desenvolvimento e implementação do módulo 2.",
     tecnologia: "CSS",
-    status: "Concluída",
+    status: "Em andamento",
     link: "#atividade-2"
   },
   {
     id: 3,
     numero: "03",
-    titulo: "Estrutura Semântica",
-    descricao: "Utilização de elementos semânticos na aplicação.",
-    tecnologia: "HTML",
-    status: "Concluída",
+    titulo: "Atividade Prática 3",
+    descricao: "Desenvolvimento e implementação do módulo 3.",
+    tecnologia: "JavaScript",
+    status: "Planejada",
     link: "#atividade-3"
-  },
-
-  // Continue com as demais atividades...
+  }
 ];
 
 export default atividades;

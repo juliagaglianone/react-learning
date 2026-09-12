@@ -1,25 +1,65 @@
 import React from 'react';
 
+const statusConfig = {
+  Planejada: {
+    classe: 'status-planejada',
+    texto: 'Planejada'
+  },
+
+  'Em andamento': {
+    classe: 'status-andamento',
+    texto: 'Em andamento'
+  },
+
+  Concluída: {
+    classe: 'status-concluida',
+    texto: 'Concluída'
+  }
+};
+
 export default function CardAtividade({
   numero,
   titulo,
   descricao,
   tecnologia,
+  status,
   link
 }) {
+  const statusInfo = statusConfig[status] || statusConfig.Planejada;
+
   return (
-    <div className="card-atividade">
-      <span className="card-numero">{numero}</span>
+    <article
+      className="atividade-card"
+      tabIndex={0}
+    >
+      <div className="atividade-header">
+        <span className="atividade-numero">
+          #{numero}
+        </span>
 
-      <h3>{titulo}</h3>
+        <span className="atividade-tag">
+          {tecnologia}
+        </span>
+      </div>
 
-      <p>{descricao}</p>
+      <h3 className="atividade-titulo">
+        {titulo}
+      </h3>
 
-      <span className="card-tecnologia">{tecnologia}</span>
+      <p className="atividade-descricao">
+        {descricao}
+      </p>
 
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        Acessar atividade
+      <span className={`atividade-status ${statusInfo.classe}`}>
+        {statusInfo.texto}
+      </span>
+
+      <a
+        href={link}
+        className="atividade-btn"
+      >
+        Ver Detalhes
       </a>
-    </div>
+    </article>
   );
 }

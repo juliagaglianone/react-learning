@@ -480,6 +480,44 @@ export default function App() {
       </p>
     </article>
 
+    {/* Card 16 - Status Condicional */}
+
+    <article className="card-evidencia">
+      <h3>Card 16: Status Condicional</h3>
+
+      <p>
+        O componente <code>CardAtividade</code> apresenta o status de cada
+        atividade de forma condicional, de acordo com o valor recebido pela
+        propriedade <code>status</code>.
+      </p>
+
+      <div className="demonstracao-status">
+
+    <div>
+      <strong>Planejada</strong>
+      <span className="atividade-status status-planejada">
+        Planejada
+      </span>
+    </div>
+
+    <div>
+      <strong>Em andamento</strong>
+      <span className="atividade-status status-andamento">
+        Em andamento
+      </span>
+    </div>
+
+    <div>
+      <strong>Concluída</strong>
+      <span className="atividade-status status-concluida">
+        Concluída
+      </span>
+    </div>
+
+      </div>
+    </article>
+
+
         {/* Seção de Grid de Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
@@ -492,7 +530,8 @@ export default function App() {
                 titulo={item.titulo}
                 descricao={item.descricao}
                 tecnologia={item.tecnologia}
-                link={`#atividade-${item.id}`}
+                status={item.status}
+                link={item.link}
               />
             ))}
           </div>
