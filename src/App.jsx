@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Cabecalho from './components/Cabecalho';
 import Rodape from './components/Rodape';
+import CardAtividade from './components/CardAtividade';
 import profileJulia from './public/profile-julia.jpg';
 
 export default function App() {
@@ -411,6 +412,34 @@ export default function App() {
           <code>#inicio</code> para retornar à seção inicial da página.
         </p>
       </article>
+      {/* Card 13 - Componente CardAtividade */}
+    <article className="card-evidencia">
+      <h3>Card 13: Componente CardAtividade</h3>
+
+      <p>
+        <strong>Arquivo:</strong>{' '}
+        <code>components/CardAtividade.jsx</code>
+      </p>
+
+      <p>
+        <strong>Objetivo:</strong>{' '}
+        Transformar os cartões de atividades em um componente reutilizável,
+        evitando a repetição da estrutura dos cartões no <code>App.jsx</code>.
+      </p>
+
+      <p>
+        <strong>Props recebidas:</strong>{' '}
+        O componente recebe as props <code>numero</code>, <code>titulo</code>,
+        <code>descricao</code>, <code>tecnologia</code> e <code>link</code>.
+      </p>
+
+      <p>
+        <strong>Reutilização:</strong>{' '}
+        Os 30 cartões da seção de atividades são renderizados utilizando o
+        mesmo componente <code>CardAtividade</code>, com diferentes valores
+        enviados por meio das props.
+      </p>
+    </article>
 
         {/* Seção de Grid de Atividades */}
         <section id="atividades">
@@ -418,36 +447,14 @@ export default function App() {
 
           <div className="grid-atividades">
             {atividades.map((item) => (
-              <article
+              <CardAtividade
                 key={item.id}
-                className="atividade-card"
-                tabIndex={0}
-              >
-                <div className="atividade-header">
-                  <span className="atividade-numero">
-                    #{item.numero}
-                  </span>
-
-                  <span className="atividade-tag">
-                    {item.tecnologia}
-                  </span>
-                </div>
-
-                <h3 className="atividade-titulo">
-                  {item.titulo}
-                </h3>
-
-                <p className="atividade-descricao">
-                  {item.descricao}
-                </p>
-
-                <a
-                  href={`#atividade-${item.id}`}
-                  className="atividade-btn"
-                >
-                  Ver Detalhes
-                </a>
-              </article>
+                numero={item.numero}
+                titulo={item.titulo}
+                descricao={item.descricao}
+                tecnologia={item.tecnologia}
+                link={`#atividade-${item.id}`}
+              />
             ))}
           </div>
         </section>
