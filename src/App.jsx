@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Cabecalho from './components/Cabecalho';
-import profileJúlia from './public/profile-julia.jpg';
+import Rodape from './components/Rodape';
+import profileJulia from './public/profile-julia.jpg';
 
 export default function App() {
   // Dados simulados para as 30 atividades
@@ -21,7 +22,7 @@ export default function App() {
         nome="Júlia Gaglianone de Andrade"
         curso="Curso: Desenvolvimento Web | Turma 2026"
         descricao="Portfólio para mapeamento do progresso em React e boas práticas web."
-        foto={profileJúlia}
+        foto={profileJulia}
       />
 
       {/* Conteúdo Principal */}
@@ -377,6 +378,40 @@ export default function App() {
           </p>
         </article>
 
+        {/* Card 12 - Componente Rodape */}
+      <article className="card-evidencia">
+        <h3>Card 12: Componente Rodape</h3>
+
+        <p>
+          <strong>Arquivo:</strong>{' '}
+          <code>components/Rodape.jsx</code>
+        </p>
+
+        <p>
+          <strong>Responsabilidade:</strong>{' '}
+          Exibir o nome do autor, o ano atual e um link para retornar ao
+          início da página.
+        </p>
+
+        <p>
+          <strong>Reutilização:</strong>{' '}
+          O nome do autor é recebido por meio da prop <code>nome</code>,
+          enquanto o ano é calculado diretamente no componente.
+        </p>
+
+        <p>
+          <strong>Local de uso:</strong>{' '}
+          O componente é importado e utilizado em <code>App.jsx</code>,
+          substituindo a marcação direta do rodapé.
+        </p>
+
+        <p>
+          <strong>Funcionalidade:</strong>{' '}
+          O link <code>Voltar ao início</code> utiliza a âncora{' '}
+          <code>#inicio</code> para retornar à seção inicial da página.
+        </p>
+      </article>
+
         {/* Seção de Grid de Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
@@ -438,12 +473,7 @@ export default function App() {
 
       </main>
 
-      {/* Rodapé */}
-      <footer>
-        <p>
-          &copy; {new Date().getFullYear()} - Todos os direitos reservados.
-        </p>
-      </footer>
+      <Rodape nome="Júlia Gaglianone de Andrade" />
 
     </div>
   );
