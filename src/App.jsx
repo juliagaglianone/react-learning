@@ -2,19 +2,12 @@ import React from 'react';
 import './App.css';
 import Cabecalho from './components/Cabecalho';
 import Rodape from './components/Rodape';
+import atividades from './data/atividades';
 import CardAtividade from './components/CardAtividade';
 import profileJulia from './public/profile-julia.jpg';
 
 export default function App() {
-  // Dados simulados para as 30 atividades
-  const atividades = Array.from({ length: 30 }, (_, index) => ({
-    id: index + 1,
-    numero: String(index + 1).padStart(2, '0'),
-    titulo: `Atividade Prática ${index + 1}`,
-    descricao: `Desenvolvimento e implementação do módulo ${index + 1} focado em componentes e boas práticas React.`,
-    tecnologia: index % 2 === 0 ? 'React & CSS' : 'JavaScript & JSX',
-  }));
-
+  
   return (
     <div className="app-container">
 
@@ -441,6 +434,23 @@ export default function App() {
       </p>
     </article>
 
+    {/* Card 14 - Modelagem dos dados das atividades */}
+    <article className="card-evidencia">
+      <h3>Card 14: Modelagem dos Dados das Atividades</h3>
+
+      <p>
+        Os dados das atividades foram separados da estrutura visual da
+        aplicação e armazenados no arquivo{' '}
+        <code>data/atividades.js</code>.
+      </p>
+
+      <p>
+        Cada objeto possui as propriedades <code>id</code>,{' '}
+        <code>numero</code>, <code>titulo</code>, <code>descricao</code>,{' '}
+        <code>tecnologia</code>, <code>status</code> e <code>link</code>.
+      </p>
+    </article>
+
         {/* Seção de Grid de Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
@@ -476,6 +486,23 @@ export default function App() {
           <p>
             Canais de comunicação e redes do desenvolvedor.
           </p>
+        </section>
+
+        <section id="atividades">
+          <h2>Lista de Atividades (30)</h2>
+
+          <div className="grid-atividades">
+            {atividades.map((item) => (
+              <CardAtividade
+                key={item.id}
+                numero={item.numero}
+                titulo={item.titulo}
+                descricao={item.descricao}
+                tecnologia={item.tecnologia}
+                link={item.link}
+              />
+            ))}
+          </div>
         </section>
 
       </main>
