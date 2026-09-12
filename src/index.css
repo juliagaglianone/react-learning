@@ -65,3 +65,35 @@
   border-radius: var(--radius-sm);
   font-size: var(--font-size-sm);
 }
+:root {
+  /* Cores */
+  --color-primary: #b4144c;
+  --color-primary-hover: #c90855;
+  --color-on-primary: #ffffff;
+  --color-surface: #ffffff;
+  --color-bg: #f3f4f6;
+  --color-border: #e5e7eb;
+  --color-text-main: #374151;
+  --color-text-heading: #111827;
+  --color-accent: #2563eb;
+
+  /* Espaçamento */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+
+  /* Bordas e sombras */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  /* Tipografia */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
