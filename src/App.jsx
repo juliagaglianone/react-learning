@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Cabecalho from './components/Cabecalho';
+import profileJúlia from './public/profile-julia.jpg';
 
 export default function App() {
   // Dados simulados para as 30 atividades
@@ -13,207 +15,401 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Header */}
-      <header className="header-container">
-        <div className="profile-info">
-          <img 
-            src="https://via.placeholder.com/120" 
-            alt="Foto de perfil do desenvolvedor" 
-            className="avatar"
-          />
-          <div>
-            <h1>Seu Nome Completo</h1>
-            <p className="subtitle">Curso: Desenvolvimento Web | Turma 2026</p>
-            <p className="description">
-              Portfólio para mapeamento do progresso em React e boas práticas web.
-            </p>
-            <a href="#atividades" className="btn-primary">
-              Ver Atividades
-            </a>
-          </div>
-        </div>
 
-        <nav className="navbar">
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#atividades">Atividades</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+      {/* Componente de Cabeçalho */}
+      <Cabecalho
+        nome="Júlia Gaglianone de Andrade"
+        curso="Curso: Desenvolvimento Web | Turma 2026"
+        descricao="Portfólio para mapeamento do progresso em React e boas práticas web."
+        foto={profileJúlia}
+      />
 
       {/* Conteúdo Principal */}
       <main>
+
         {/* Seção Início / Evidências */}
         <section id="inicio">
           <h2>Visão Geral e Evidências</h2>
 
-          {/* Card 3 (Estrutura Semântica) */}
+          {/* Card 3 - Estrutura Semântica */}
           <article className="card-evidencia">
             <h3>Card 3: Estrutura Semântica</h3>
-            <p>Elementos semânticos empregados nesta aplicação.</p>
+            <p>
+              Elementos semânticos empregados nesta aplicação.
+            </p>
           </article>
 
-          {/* Card 4 (Identidade Visual) */}
+          {/* Card 4 - Identidade Visual */}
           <article className="card-evidencia">
             <h3>Card 4: Decisões de Identidade Visual</h3>
-            <p>Escolhas aplicadas para apresentação do autor e marca pessoal.</p>
+            <p>
+              Escolhas aplicadas para apresentação do autor e marca pessoal.
+            </p>
           </article>
 
-          {/* Card 5: Teste do Menu e Links */}
+          {/* Card 5 - Teste do Menu e Links */}
           <article className="card-evidencia">
             <h3>Card 5: Teste de Navegação e Âncoras</h3>
-            <p>Verificação do funcionamento do menu de navegação:</p>
+
+            <p>
+              Verificação do funcionamento do menu de navegação:
+            </p>
+
             <ul>
-              <li><strong>Início (<code>#inicio</code>):</strong> Rola suavemente para a visão geral e cards.</li>
-              <li><strong>Atividades (<code>#atividades</code>):</strong> Direciona para a lista com 30 itens.</li>
-              <li><strong>Sobre (<code>#sobre</code>):</strong> Navega para as informações sobre o projeto e tecnologias.</li>
-              <li><strong>Contato (<code>#contato</code>):</strong> Direciona para a área de canais de comunicação.</li>
-              <li><strong>Acessibilidade/Foco:</strong> Foco visual ativo via teclado (tecla <code>Tab</code>) destacado nos links.</li>
+              <li>
+                <strong>Início (<code>#inicio</code>):</strong>{' '}
+                Rola suavemente para a visão geral e cards.
+              </li>
+
+              <li>
+                <strong>Atividades (<code>#atividades</code>):</strong>{' '}
+                Direciona para a lista com 30 itens.
+              </li>
+
+              <li>
+                <strong>Sobre (<code>#sobre</code>):</strong>{' '}
+                Navega para as informações sobre o projeto e tecnologias.
+              </li>
+
+              <li>
+                <strong>Contato (<code>#contato</code>):</strong>{' '}
+                Direciona para a área de canais de comunicação.
+              </li>
+
+              <li>
+                <strong>Acessibilidade/Foco:</strong>{' '}
+                Foco visual ativo via teclado (tecla <code>Tab</code>)
+                destacado nos links.
+              </li>
             </ul>
           </article>
 
-          {/* Card 7: Estados Visuais do Componente de Cartão */}
+          {/* Card 7 - Estados Visuais do Componente de Cartão */}
           <article className="card-evidencia">
             <h3>Card 7: Estados Visuais do Componente de Cartão</h3>
-            <p>Demonstração dos componentes de cartão e seus estados de interação:</p>
+
+            <p>
+              Demonstração dos componentes de cartão e seus estados de
+              interação:
+            </p>
 
             <div className="demonstracao-estados">
+
               {/* Estado Normal */}
               <div className="atividade-card demo-estado">
-                <span className="estado-label">Estado: Normal</span>
+                <span className="estado-label">
+                  Estado: Normal
+                </span>
+
                 <div className="atividade-header">
-                  <span className="atividade-numero">#01</span>
-                  <span className="atividade-tag">React</span>
+                  <span className="atividade-numero">
+                    #01
+                  </span>
+
+                  <span className="atividade-tag">
+                    React
+                  </span>
                 </div>
-                <h4 className="atividade-titulo">Exemplo Normal</h4>
-                <p className="atividade-descricao">Apresentação padrão do cartão com contraste adequado.</p>
-                <button className="atividade-btn" type="button">Acessar Entrega</button>
+
+                <h4 className="atividade-titulo">
+                  Exemplo Normal
+                </h4>
+
+                <p className="atividade-descricao">
+                  Apresentação padrão do cartão com contraste adequado.
+                </p>
+
+                <button
+                  className="atividade-btn"
+                  type="button"
+                >
+                  Acessar Entrega
+                </button>
               </div>
 
               {/* Estado Hover Simulado */}
               <div className="atividade-card demo-estado state-hover">
-                <span className="estado-label">Estado: Hover</span>
+                <span className="estado-label">
+                  Estado: Hover
+                </span>
+
                 <div className="atividade-header">
-                  <span className="atividade-numero">#02</span>
-                  <span className="atividade-tag">CSS</span>
+                  <span className="atividade-numero">
+                    #02
+                  </span>
+
+                  <span className="atividade-tag">
+                    CSS
+                  </span>
                 </div>
-                <h4 className="atividade-titulo">Exemplo Hover</h4>
-                <p className="atividade-descricao">Elevação suave na sombra e alteração de borda ao passar o mouse.</p>
-                <button className="atividade-btn" type="button">Acessar Entrega</button>
+
+                <h4 className="atividade-titulo">
+                  Exemplo Hover
+                </h4>
+
+                <p className="atividade-descricao">
+                  Elevação suave na sombra e alteração de borda ao passar
+                  o mouse.
+                </p>
+
+                <button
+                  className="atividade-btn"
+                  type="button"
+                >
+                  Acessar Entrega
+                </button>
               </div>
 
               {/* Estado Focus Simulado */}
               <div className="atividade-card demo-estado state-focus">
-                <span className="estado-label">Estado: Focus (Teclado)</span>
+                <span className="estado-label">
+                  Estado: Focus (Teclado)
+                </span>
+
                 <div className="atividade-header">
-                  <span className="atividade-numero">#03</span>
-                  <span className="atividade-tag">JSX</span>
+                  <span className="atividade-numero">
+                    #03
+                  </span>
+
+                  <span className="atividade-tag">
+                    JSX
+                  </span>
                 </div>
-                <h4 className="atividade-titulo">Exemplo Focus</h4>
-                <p className="atividade-descricao">Contorno visível e destacado para navegação acessível via Tab.</p>
-                <button className="atividade-btn" type="button" tabIndex={0}>Acessar Entrega</button>
+
+                <h4 className="atividade-titulo">
+                  Exemplo Focus
+                </h4>
+
+                <p className="atividade-descricao">
+                  Contorno visível e destacado para navegação acessível
+                  via Tab.
+                </p>
+
+                <button
+                  className="atividade-btn"
+                  type="button"
+                  tabIndex={0}
+                >
+                  Acessar Entrega
+                </button>
               </div>
+
             </div>
           </article>
 
-          {/* Card 8: Organização de Layout com Flexbox */}
+          {/* Card 8 - Organização de Layout com Flexbox */}
           <article className="card-evidencia">
             <h3>Card 8: Organização com Flexbox</h3>
+
             <p>
-              <strong>Problema Resolvido:</strong> O alinhamento vertical imperfeito de textos e imagens 
-              no cabeçalho, além da necessidade de <code>margin</code> individual para separar itens de menu. 
-              Com o Flexbox, usamos <code>align-items: center</code> para centralizar verticalmente e <code>gap</code> 
-              para um espaçamento limpo e constante.
+              <strong>Problema Resolvido:</strong> O alinhamento vertical
+              imperfeito de textos e imagens no cabeçalho, além da necessidade
+              de <code>margin</code> individual para separar itens de menu.
+              Com o Flexbox, usamos <code>align-items: center</code> para
+              centralizar verticalmente e <code>gap</code> para um espaçamento
+              limpo e constante.
             </p>
 
             {/* Demonstração Comparativa de Alinhamento */}
             <div className="flex-demo-container">
+
               {/* Sem Flexbox */}
               <div className="flex-demo-box demo-sem-flex">
-                <p>Sem Flexbox (display block padrão):</p>
+                <p>
+                  Sem Flexbox (display block padrão):
+                </p>
+
                 <div className="demo-items">
-                  <span className="demo-badge">Item 1</span>
-                  <span className="demo-badge">Item 2</span>
-                  <span className="demo-badge">Item 3</span>
+                  <span className="demo-badge">
+                    Item 1
+                  </span>
+
+                  <span className="demo-badge">
+                    Item 2
+                  </span>
+
+                  <span className="demo-badge">
+                    Item 3
+                  </span>
                 </div>
               </div>
 
               {/* Com Flexbox */}
               <div className="flex-demo-box demo-com-flex">
-                <p>Com Flexbox (justify-content: space-between e align-items: center):</p>
+                <p>
+                  Com Flexbox (justify-content: space-between e
+                  align-items: center):
+                </p>
+
                 <div className="demo-items">
-                  <span className="demo-badge">Item 1</span>
-                  <span className="demo-badge">Item 2</span>
-                  <span className="demo-badge">Item 3</span>
+                  <span className="demo-badge">
+                    Item 1
+                  </span>
+
+                  <span className="demo-badge">
+                    Item 2
+                  </span>
+
+                  <span className="demo-badge">
+                    Item 3
+                  </span>
                 </div>
               </div>
+
             </div>
           </article>
+
         </section>
 
-        {/* Card 9: Organização de Atividades com CSS Grid */}
-      <article className="card-evidencia">
-        <h3>Card 9: Grade Responsiva com CSS Grid</h3>
-        <p>
-          <strong>Regra Utilizada:</strong> <code>grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))</code>.
-        </p>
-        <ul>
-          <li>
-            <strong><code>auto-fill</code>:</strong> Preenche a linha com o máximo de colunas possível mantendo o tamanho mínimo.
-          </li>
-          <li>
-            <strong><code>minmax(280px, 1fr)</code>:</strong> Garante que nenhum cartão fique menor que <code>280px</code> em telas pequenas e faz com que eles se expandam igualmente (<code>1fr</code>) para ocupar o espaço disponível em telas maiores.
-          </li>
-          <li>
-            <strong>Prevenção de Overflow:</strong> Eliminou a necessidade de larguras fixas em <code>px</code>, evitando rolagem horizontal em dispositivos móveis.
-          </li>
-        </ul>
-      </article>
+        {/* Card 9 - Organização de Atividades com CSS Grid */}
+        <article className="card-evidencia">
+          <h3>Card 9: Grade Responsiva com CSS Grid</h3>
 
-      {/* Card 10: Responsividade e Testes de Tela */}
-      <article className="card-evidencia">
-        <h3>Card 10: Responsividade e Pontos de Ajuste</h3>
-        <p>Resultados dos testes de layout e correções efetuadas para múltiplos dispositivos:</p>
-        <ul>
-          <li>
-            <strong>Mobile (360 px):</strong>
-            <br />
-            <em>Problema:</em> Quebra do menu e estouro do avatar no topo.
-            <br />
-            <em>Solução:</em> Mudança da direção do Flexbox para coluna (<code>flex-direction: column</code>), redução da tipografia e do avatar para 80px, e centralização dos elementos.
-          </li>
-          <li>
-            <strong>Tablet (768 px):</strong>
-            <br />
-            <em>Problema:</em> Espaçamento lateral excessivo e desalinhamento entre perfil e links do menu.
-            <br />
-            <em>Solução:</em> Realinhamento da navegação em linha e adequação dos cartões com <code>minmax(240px, 1fr)</code>.
-          </li>
-          <li>
-            <strong>Desktop (1440 px):</strong>
-            <br />
-            <em>Problema:</em> Conteúdo muito esticado e disperso nas extremidades.
-            <br />
-            <em>Solução:</em> Aplicação de <code>max-width: 1280px</code> e margens automáticas para centralizar o contêiner principal.
-          </li>
-        </ul>
-      </article>
+          <p>
+            <strong>Regra Utilizada:</strong>{' '}
+            <code>
+              grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+            </code>.
+          </p>
 
-        {/* Seção de Grid de Atividades (30 Itens) */}
+          <ul>
+            <li>
+              <strong>
+                <code>auto-fill</code>:
+              </strong>{' '}
+              Preenche a linha com o máximo de colunas possível mantendo o
+              tamanho mínimo.
+            </li>
+
+            <li>
+              <strong>
+                <code>minmax(280px, 1fr)</code>:
+              </strong>{' '}
+              Garante que nenhum cartão fique menor que <code>280px</code>{' '}
+              em telas pequenas e faz com que eles se expandam igualmente
+              (<code>1fr</code>) para ocupar o espaço disponível em telas
+              maiores.
+            </li>
+
+            <li>
+              <strong>Prevenção de Overflow:</strong>{' '}
+              Eliminou a necessidade de larguras fixas em <code>px</code>,
+              evitando rolagem horizontal em dispositivos móveis.
+            </li>
+          </ul>
+        </article>
+
+        {/* Card 10 - Responsividade e Testes de Tela */}
+        <article className="card-evidencia">
+          <h3>Card 10: Responsividade e Pontos de Ajuste</h3>
+
+          <p>
+            Resultados dos testes de layout e correções efetuadas para
+            múltiplos dispositivos:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Mobile (360 px):</strong>
+              <br />
+
+              <em>Problema:</em> Quebra do menu e estouro do avatar no topo.
+              <br />
+
+              <em>Solução:</em> Mudança da direção do Flexbox para coluna
+              (<code>flex-direction: column</code>), redução da tipografia
+              e do avatar para 80px, e centralização dos elementos.
+            </li>
+
+            <li>
+              <strong>Tablet (768 px):</strong>
+              <br />
+
+              <em>Problema:</em> Espaçamento lateral excessivo e
+              desalinhamento entre perfil e links do menu.
+              <br />
+
+              <em>Solução:</em> Realinhamento da navegação em linha e
+              adequação dos cartões com{' '}
+              <code>minmax(240px, 1fr)</code>.
+            </li>
+
+            <li>
+              <strong>Desktop (1440 px):</strong>
+              <br />
+
+              <em>Problema:</em> Conteúdo muito esticado e disperso nas
+              extremidades.
+              <br />
+
+              <em>Solução:</em> Aplicação de <code>max-width: 1280px</code>{' '}
+              e margens automáticas para centralizar o contêiner principal.
+            </li>
+          </ul>
+        </article>
+        {/* Card 11 - Componente Cabecalho */}
+        <article className="card-evidencia">
+          <h3>Card 11: Componente Cabecalho</h3>
+
+          <p>
+            <strong>Arquivo:</strong>{' '}
+            <code>components/Cabecalho.jsx</code>
+          </p>
+
+          <p>
+            <strong>Responsabilidade:</strong>{' '}
+            O componente é responsável por organizar e exibir o cabeçalho da
+            aplicação, incluindo a foto de perfil, nome, curso, descrição,
+            botão de acesso às atividades e menu de navegação.
+          </p>
+
+          <p>
+            <strong>Props:</strong>{' '}
+            Recebe <code>nome</code>, <code>curso</code>,{' '}
+            <code>descricao</code> e <code>foto</code>, permitindo reutilizar
+            o componente com diferentes informações.
+          </p>
+
+          <p>
+            <strong>Local de uso:</strong>{' '}
+            O componente é importado e utilizado em <code>App.jsx</code>,
+            substituindo a marcação direta do cabeçalho.
+          </p>
+        </article>
+
+        {/* Seção de Grid de Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
+
           <div className="grid-atividades">
             {atividades.map((item) => (
-              <article key={item.id} className="atividade-card" tabIndex={0}>
+              <article
+                key={item.id}
+                className="atividade-card"
+                tabIndex={0}
+              >
                 <div className="atividade-header">
-                  <span className="atividade-numero">#{item.numero}</span>
-                  <span className="atividade-tag">{item.tecnologia}</span>
+                  <span className="atividade-numero">
+                    #{item.numero}
+                  </span>
+
+                  <span className="atividade-tag">
+                    {item.tecnologia}
+                  </span>
                 </div>
-                <h3 className="atividade-titulo">{item.titulo}</h3>
-                <p className="atividade-descricao">{item.descricao}</p>
-                <a href={`#atividade-${item.id}`} className="atividade-btn">
+
+                <h3 className="atividade-titulo">
+                  {item.titulo}
+                </h3>
+
+                <p className="atividade-descricao">
+                  {item.descricao}
+                </p>
+
+                <a
+                  href={`#atividade-${item.id}`}
+                  className="atividade-btn"
+                >
                   Ver Detalhes
                 </a>
               </article>
@@ -224,8 +420,9 @@ export default function App() {
         {/* Seção Sobre */}
         <section id="sobre">
           <h2>Sobre o Projeto</h2>
+
           <p>
-            Projeto desenvolvido como avaliação individual com foco em React, 
+            Projeto desenvolvido como avaliação individual com foco em React,
             CSS moderno, Flexbox e acessibilidade.
           </p>
         </section>
@@ -233,13 +430,21 @@ export default function App() {
         {/* Seção Contato */}
         <section id="contato">
           <h2>Contato</h2>
-          <p>Canais de comunicação e redes do desenvolvedor.</p>
+
+          <p>
+            Canais de comunicação e redes do desenvolvedor.
+          </p>
         </section>
+
       </main>
 
+      {/* Rodapé */}
       <footer>
-        <p>&copy; {new Date().getFullYear()} - Todos os direitos reservados.</p>
+        <p>
+          &copy; {new Date().getFullYear()} - Todos os direitos reservados.
+        </p>
       </footer>
+
     </div>
   );
 }
