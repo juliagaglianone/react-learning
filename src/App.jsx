@@ -3,9 +3,8 @@ import './App.css';
 import Cabecalho from './components/Cabecalho';
 import Rodape from './components/Rodape';
 import atividades from './data/atividades';
-import CardAtividade from './components/CardAtividade';
 import profileJulia from './public/profile-julia.jpg';
-
+import CardAtividade from './components/CardAtividade';
 export default function App() {
   
   return (
@@ -451,6 +450,36 @@ export default function App() {
       </p>
     </article>
 
+    {/* Card 15 - Renderização da lista com map */}
+    <article className="card-evidencia">
+      <h3>Card 15: Renderização da Lista com map</h3>
+
+      <p>
+        <strong>Array:</strong>{' '}
+        O arquivo <code>data/atividades.js</code> contém um array de objetos
+        que armazena os dados das atividades.
+      </p>
+
+      <p>
+        <strong>map:</strong>{' '}
+        O método <code>map()</code> percorre cada objeto do array e gera um
+        componente <code>CardAtividade</code> para cada atividade.
+      </p>
+
+      <p>
+        <strong>Key:</strong>{' '}
+        A propriedade <code>key</code> recebe o valor de <code>item.id</code>,
+        que é único para cada atividade. Isso permite que o React identifique
+        cada elemento da lista de forma estável.
+      </p>
+
+      <p>
+        <strong>Numeração:</strong>{' '}
+        As atividades são numeradas de <code>01</code> a <code>30</code>,
+        conforme os dados definidos no array.
+      </p>
+    </article>
+
         {/* Seção de Grid de Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
@@ -478,6 +507,34 @@ export default function App() {
             CSS moderno, Flexbox e acessibilidade.
           </p>
         </section>
+        <article className="card-evidencia">
+          <h3>Card 15: Renderização da Lista com map</h3>
+
+          <p>
+            <strong>Array:</strong>{' '}
+            O arquivo <code>data/atividades.js</code> contém um array de objetos
+            que armazena os dados das atividades.
+          </p>
+
+          <p>
+            <strong>map:</strong>{' '}
+            O método <code>map()</code> percorre cada objeto do array e gera um
+            componente <code>CardAtividade</code> para cada atividade.
+          </p>
+
+          <p>
+            <strong>Key:</strong>{' '}
+            A propriedade <code>key</code> recebe o valor de <code>item.id</code>,
+            que é único para cada atividade. Isso permite que o React identifique
+            cada elemento da lista de forma estável.
+          </p>
+
+          <p>
+            <strong>Numeração:</strong>{' '}
+            As atividades são numeradas de <code>01</code> a <code>30</code>,
+            conforme os dados definidos no array.
+          </p>
+        </article>
 
         {/* Seção Contato */}
         <section id="contato">
@@ -486,23 +543,6 @@ export default function App() {
           <p>
             Canais de comunicação e redes do desenvolvedor.
           </p>
-        </section>
-
-        <section id="atividades">
-          <h2>Lista de Atividades (30)</h2>
-
-          <div className="grid-atividades">
-            {atividades.map((item) => (
-              <CardAtividade
-                key={item.id}
-                numero={item.numero}
-                titulo={item.titulo}
-                descricao={item.descricao}
-                tecnologia={item.tecnologia}
-                link={item.link}
-              />
-            ))}
-          </div>
         </section>
 
       </main>
