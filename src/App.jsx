@@ -518,6 +518,7 @@ export default function App() {
     </article>
 
 
+
         {/* Seção de Grid de Atividades */}
         <section id="atividades">
           <h2>Lista de Atividades (30)</h2>
